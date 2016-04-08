@@ -7,7 +7,12 @@ def change_maker(amount)
  	else
  	 amount < 5
  	 result["penny"] = amount 
- 	end 
+ 	end
 
+ 	if amount == 10
+ 		result["dime"] = 1
+ 		result["nickel"] = 0
+ 		result["penny"] = 0 
+ 	end	
   result
 end	

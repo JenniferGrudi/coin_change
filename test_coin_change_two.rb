@@ -12,8 +12,11 @@ class TestCoinChange <Minitest::Test
 
 	def test_change_due_is_5
 		assert_equal({"quarter" => 0, "dime" => 0, "nickel" => 1, "penny" => 0}, change_maker(5))	
-	end			
-
+	end
+	
+	def test_change_due_is_6
+		assert_equal({"quarter" => 0, "dime" => 0, "nickel" => 1, "penny" => 1}, change_maker(6))		
+	end	
 
 
 

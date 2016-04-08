@@ -9,10 +9,11 @@ def change_maker(amount)
  	 result["penny"] = amount 
  	end
 
- 	if amount == 10
- 		result["dime"] = 1
- 		result["nickel"] = 0
- 		result["penny"] = 0 
+ 	if amount >= 10
+     result["dime"] = 1
+ 	 result["nickel"] = amount - 10
+ 	 result["penny"] = amount - 10
  	end	
+
   result
 end	

@@ -2,7 +2,7 @@ require "minitest/autorun"
 require_relative "coin_change_two.rb"
 
 class TestCoinChange <Minitest::Test
-	
+
 	def test_change_due_is_0
 		assert_equal({"quarter" => 0, "dime" => 0, "nickel" => 0, "penny" => 0}, change_maker(0))
 	end
@@ -41,7 +41,11 @@ class TestCoinChange <Minitest::Test
 
 	def test_change_due_is_24
 		assert_equal({"quarter" => 0, "dime" => 2, "nickel" => 0, "penny" => 4}, change_maker(24))
-	end			
+	end	
+
+	def test_change_due_is_25		
+		assert_equal({"quarter" => 1, "dime" => 0, "nickel" => 0, "penny" => 0}, change_maker(25))
+	end	
 
 
 

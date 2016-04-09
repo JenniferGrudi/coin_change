@@ -1,28 +1,30 @@
 def change_maker(amount)
- result = {"quarter" => 0, "dime" => 0, "nickel" => 0, "penny" => amount}
+ result = {"quarter" => 0, "dime" => 0, "nickel" => 0, "penny" => 0}
+ quarter = 25 
+ dime = 10
+ nickel = 5
+ penny = 1
 
+	while amount >= quarter
+		result["quarter"] = result["quarter"] + 1
+		amount = amount - quarter	
+	end
 
- 	if amount >= 20
- 		result["dime"] = 2
- 		amount = amount - 20
- 		result["penny"] = amount
+ 	while amount >= dime
+ 		result["dime"] = result["dime"] + 1
+ 		amount = amount - dime
+ 	end	
 
- 	elsif amount >=18
- 	 result["dime"] = 1
- 	 result["nickel"] = 1
- 	 amount = amount - 15
- 	 result["penny"] = amount	
-
- 	elsif amount >= 10
-     result["dime"] = 1  
- 	 amount = amount - 10
- 	 result["penny"] = amount
-
- 	elsif amount >= 5
- 	 result["nickel"] = 1
- 	 amount = amount - 5
- 	 result["penny"] = amount 
+ 	while amount >= nickel
+ 		result["nickel"] = result["nickel"] + 1
+ 		amount = amount - nickel
  	end
+ 	
+ 	while amount >= penny
+ 		result["penny"] = result["penny"] + 1
+ 		amount = amount - penny
+ 	end	
 
   result
 end	
+	
